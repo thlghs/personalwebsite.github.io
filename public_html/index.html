@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assn1.css">
+    <!-- <link rel="stylesheet" href="hippo.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <!-- <script src="hippo.js"></script> -->
+   
+    <style>
+
+        #header-text span:hover 
+        {
+            color: #ff6600; 
+            transition: color 0.3s;
+        }
+
+        header img:hover 
+        {
+            animation: pulsate 1s infinite;
+            transform: scale(1.1); 
+            transition: transform 0.3s;
+        }
+
+        button:hover 
+        {
+            animation: pulsate 1s infinite; 
+        }
+
+        @keyframes pulsate 
+        {
+            0% 
+            {
+                transform: scale(1);
+            }
+
+            50% 
+            {
+                transform: scale(1.1);
+            }
+
+            100% 
+            {
+                transform: scale(1);
+            }
+        }
+
+        #dynamic-role 
+        {
+            display: inline-block;
+            animation: dance 2s infinite;
+        }
+
+        @keyframes dance 
+        {
+            0%, 100% 
+            {
+                transform: translateY(0);
+            }
+
+            50% 
+            {
+                transform: translateY(-10px);
+            }
+        }
+
+        nav ul li a:hover 
+        {
+            color: #ff6600;
+            transition: color 0.3s;
+        }
+
+        /* Add 3D cursor styles */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff6600;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}
+
+.cursor:hover {
+  transform: scale(1.5);
+}
+
+/* Disable default cursor */
+body {
+  cursor: none;
+}
+   
+    </style>
+
+
+    <script defer src="assn1.js"></script>
+    <title>Your Personal Website</title>
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#about" data-aos="fade-up" class="item">About</a></li>
+            <li><a href="#profile" data-aos="fade-right" data-aos-delay="100" class="item">Profile</a></li>
+            <li><a href="#education" data-aos="fade-right" data-aos-delay="200" class="item">Education</a></li>
+            <li><a href="#achievements" data-aos="fade-right" data-aos-delay="300"class="item">Achievements</a></li>
+            <li><a href="#skills" data-aos="fade-right" data-aos-delay="400" class="item">Skills</a></li>
+            <li><a href="blog.html" data-aos="fade-right" data-aos-delay="500" class="item">Blog</a></li>
+        </ul>
+        <nav data-mode="light">
+            <button onclick="toggleMode()" data-aos="zoom-in" data-aos-delay="600">Toggle Mode</button>
+        </nav>
+    </nav>
+    <header>
+        <div id="header-text">
+            <span id="role" data-aos="fade-right" data-aos-delay="100">I am </span>
+            <span id="dynamic-role" data-aos="fade-right" data-aos-delay="200">an Enthusiast</span>
+        </div>
+        <img src="img1.png" alt="Your Photo" data-aos="zoom-in" data-aos-delay="300" >
+    </header>
+
+    <section id="about" data-aos="fade-up" data-aos-delay="500">
+        <h2>ABOUT YOURSELF</h2>
+        <p> Hey, I am Tejasvini Ramaswamy. Born in Bangalore, lived in The UK for the first 3 years of my life, and my remaining life has been in Bangalore, until 2022. I am a Tamilian, fluent in English, and can speak and understand Hindi and Kannada (still improving on it). So the things I think I know about myself is, I am a fun loving person. I like to keep people around me happy. I have always been known for being very helpful and broad-minded. I am very ambitious, and wish to conquer all my dreams and aspirations, someday soon. Hmm, what else?  My hobbies are playing with the rubix cube, solving puzzles, listening to music, playing chess, canvas paintings and have just started getting interest in competitive programming, Well but they are just hobbies, I am not a pro in any of it </p>
+    </section>
+
+
+    <section id="profile" data-aos="fade-up" data-aos-delay="300">
+         <h2> THIS IS ME!</h2>
+        <img src="img.png" alt="no img" style="margin-left:35%; margin-top:-30px;">
+        <div class="vector">
+              <a href="hippo.html" class="button">Click for a cool animation</a>
+        </div>
+    </section>
+
+    <section id="education" data-aos="fade-up">
+        <h2>EDUCATION</h2>
+        <table>
+            <tr>
+                <td>Level</td>
+                <td>Institution</td>
+                <td>Location</td>
+            </tr>
+            <tr>
+                <td>Nursery to Class 10</td>
+                <td>Sophia High School (ICSE)</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                <td>11th and 12th</td>
+                <td>Vidya Mandir Independent PU College</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                <td>BTECH+MS CND</td>
+                <td>IIIT Hyderabad</td>
+                <td>Hyderabad</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="achievements" data-aos="fade-up">
+        <h2>ACHIEVEMENTS</h2>
+        <table>
+            <tr>
+                <th>Achievement</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Highest in School</td>
+                <td>ICSE grade 10</td>
+            </tr>
+            <tr>
+                <td>District Level Topper</td>
+                <td>PCMC, in grade 11</td>
+            </tr>
+            <tr>
+                <td>2nd Prize</td>
+                <td>Intra-school debate competition</td>
+            </tr>
+            <tr>
+                <td>Bronze Medal</td>
+                <td>International English Olympiad by SOF</td>
+            </tr>
+            <tr>
+                <td>Zonal Medal of Distinction</td>
+                <td>International Math Olympiad by SOF</td>
+            </tr>
+            <tr>
+                <td>B.M Yeshwanth Memorial Award</td>
+                <td>For Academic Year 2021-2022</td>
+            </tr>
+        </table>
+        
+        <p>Apart from this, I have been a consistent topper till grade 12th, obtained many trophies and awards every academic year in my school. Another achievement I am personally proud of is I have self-studied for JEE Main and JEE Advanced for 2 years, secured a seat in IIT Hyderabad, and now in IIIT Hyderabad.</p>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+        <h2>SKILLS</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Coding Languages</td>
+                <td>Java, C, C++, Python, HTML, CSS, learning Bash, JavaScript</td>
+            </tr>
+            <tr>
+                <td>Rubix Cube</td>
+                <td>3x3, 2x2, 5x5, magic cube, megaminx, mastermorphix</td>
+            </tr>
+            <tr>
+                <td>Dance</td>
+                <td>Bharatnatyam (7 years of learning)</td>
+            </tr>
+            <tr>
+                <td>Carnatic Music</td>
+                <td>Learned for 7 years</td>
+            </tr>
+            <tr>
+                <td>Canvas Painting</td>
+                <td>Enthusiast</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer data-aos="fade-up">
+        <div id="socials">
+            <a href="https://github.com/thlghs/publicrepo" title="GitHub"><img src="img2.png" alt="GitHub"></a>
+            <a href="mailto: tejasvini.ramaswamy@research.iiit.ac.in" title="Email"><img src="img3.png" alt="Email"></a>
+        </div>
+        <a href="resume.pdf" class="resume">Download Resume</a>
+            <div class="Contact">
+            <h2>Contact details</h2>
+            <h3>Phone number  :  +91 xxxxx xxxxx</h3>
+            <h3>Email id      :  tejasvini.ramaswamy@research.iiit.ac.in</h3>
+            </div>
+           <div class="Ending">
+            <h5>©2024 PERSONALWEBSITE</h5>
+            <h6>All rights reserved</h6>
+           </div>
+          </html>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () 
+        {
+            AOS.init();
+            loadLikesAndComments('blog1');
+            loadLikesAndComments('blog2');
+            updateDynamicRole();
+        });
+
+    document.addEventListener('mousemove', (e) => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    
+    document.addEventListener('mouseenter', () => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.opacity = 1;
+    });
+    
+    document.addEventListener('mouseleave', () => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.opacity = 0;
+    });
+    </script>
+    
+</body>
+
+</html>
